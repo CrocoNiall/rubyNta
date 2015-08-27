@@ -6,7 +6,6 @@ nta = {
 puts '****************************************************************************************************'
 puts 'Please enter the line you are on.'
 current_line = gets.chomp
-
 puts 'What Station are you at?'
 start = gets.chomp
 
@@ -23,13 +22,13 @@ if current_line == destination_line
 end
 
 if current_line != destination_line
-intersect = (nta[current_line] & nta[destination_line]).to_s
-distance_to_intersect = (nta[current_line].index(start).to_i - nta[current_line].index(intersect).to_i).abs
-puts distance_to_intersect
-distance_from_intersect = (nta[destination_line].index(intersect).to_i - nta[destination_line].index(end_station).to_i).abs
-total_stop = distance_to_intersect + distance_from_intersect
-puts "*****************************************************************************************************"
-puts "You need to take the " + current_line.to_s + " for " + distance_to_intersect.to_s + " stops. Change at " + intersect + " . Then take the " + destination_line.to_s + " line and get off after " + distance_from_intersect.to_s + " stops."
+  intersect = (nta[current_line] & nta[destination_line]).to_s
+  distance_to_intersect = (nta[current_line].index(start).to_i - nta[current_line].index(intersect).to_i).abs
+  puts distance_to_intersect
+  distance_from_intersect = (nta[destination_line].index(intersect).to_i - nta[destination_line].index(end_station).to_i).abs
+  
+  puts "*****************************************************************************************************"
+  puts "You need to take the " + current_line.to_s + " for " + distance_to_intersect.to_s + " stops. Change at " + intersect + " . Then take the " + destination_line.to_s + " line and get off after " + distance_from_intersect.to_s + " stops."
 
 end
 
