@@ -5,7 +5,7 @@ nta = {
 }
 
 puts '****************************************************************************************************'
-puts 'Please enter the line you are on.'
+puts 'Please enter the line you are on.(n/l/s)'
 current_line = gets.chomp
 puts 'What Station are you at?'
 start = gets.chomp
@@ -13,7 +13,7 @@ start = gets.chomp
 puts 'What line is your destination on?'
 destination_line = gets.chomp
 
-puts 'What station would you like to go to?'
+puts 'What station would you like to go to?(n/l/s)'
 end_station = gets.chomp 
 
 if current_line == destination_line
